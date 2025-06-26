@@ -357,3 +357,18 @@ header{
   font-size: 24px;
 }
 
+/* footer */
+
+footer{
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  height: 40px;
+  position: fixed;
+  bottom: 0px;
+}
+footer address{
+  font-style: normal;
+  text-align: center;
+  line-height: 40px;
+}

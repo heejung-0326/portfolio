@@ -97,7 +97,8 @@ header h1 img{
   opacity: 0;
   animation: fadeBlurIn 3s ease infinite;
   filter: blur(10px);
-  color: #fff;
+  color: #333;
+  font-weight: bold;
   font-size: 20px;
   display: flex;             
   align-items: center;        
@@ -108,7 +109,7 @@ header h1 img{
   height: 200px;
   left: -100px;
   top: 20px;
-  background: linear-gradient(90deg, rgba(31, 126, 147, 1), rgba(201, 255, 252, 1));
+  background: #C9FFFC;
   box-shadow: 0 0 80px rgba(31, 126, 147, 0.4);
 }
 .bar2{
@@ -116,16 +117,16 @@ header h1 img{
   height: 220px;
   left: 50px;
   top: -40px;
-  background: linear-gradient(265deg, rgba(31, 147, 31, 1), rgba(188, 255, 188, 1));
+  background: #bcffbc;
   box-shadow: 0 0 80px rgba(31, 147, 31, 0.4);
   animation-delay: 0.2s;
 }
 .bar3{
   width: 200px;
   height: 200px;
-  left: 210px;
+  left: 225px;
   top: 20px;
-  background: linear-gradient(358deg, rgba(147, 31, 126, 1), rgba(255, 228, 250, 1));
+  background: #ffe4fa;
   box-shadow: 0 0 80px rgba(147, 31, 126, 0.4);
   animation-delay: 0.4s;
 }
@@ -134,7 +135,7 @@ header h1 img{
   height: 190px;
   left: 60px;
   top: 105px;
-  background: linear-gradient(215deg, rgba(147, 31, 33, 1), rgba(255, 221, 221, 1));
+  background: #ffdddd;
   box-shadow: 0 0 80px rgba(147, 31, 33, 0.4);
   animation-delay: 0.6s;
 }

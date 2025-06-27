@@ -13,9 +13,6 @@ $(function(){
 
   $('.gnb li a').on('click', function(e){
     e.preventDefault();
-    $('.gnb li').removeClass('active');
-    $(this).parent().addClass('active');
-
     const idx = $(this).parent().index();
 
     let headerColor = [
@@ -44,26 +41,15 @@ $(function(){
     });
   });
 
-  // 개인프로젝트 팝업
-  $('.personal-project').click(function(){
-    $('.personal-popup').slideDown(500);
-    $('.personal-popup-close').click(function(){
-      $('.personal-popup').slideUp(500);
-    });
+  // 프로젝트 팝업
+  $('.project-item').on('click', function(e){
+    e.preventDefault();
+    const target = $(this).data('popup');
+    $('.' + target + '-popup').slideDown(500);
   });
 
-
-  $('.team1-project').click(function(){
-    $('.team1-popup').slideDown(500);
-    $('.team1-popup-close').click(function(){
-      $('.team1-popup').slideUp(500);
-    });
-  });
-
-  $('.team2-project').click(function(){
-    $('.team2-popup').slideDown(500);
-    $('.team2-popup-close').click(function(){
-      $('.team2-popup').slideUp(500);
-    });
+  $('.popup-close').on('click', function(){
+    const target = $(this).data('popup');
+    $('.'+ target + '-popup').slideUp(500);
   });
 });

@@ -15,7 +15,18 @@ header{
   width: 100%;
   height: 100px;
   transition: backgroundColor 0.3s ease;
+  box-shadow: 3px 0px 10px rgb(157,157,157,0.8);
 }
+header h1{
+  position: absolute;
+  left: 360px;
+  top: 57px;
+  width: 100px;
+}
+header h1 img{
+  width: 100%;
+}
+
 .gnb{
   max-width: 1200px;
   width: 100%;
@@ -28,20 +39,21 @@ header{
   justify-content: right;
 }
 .gnb>ul>li{
-  background-color: #848484;
   margin-right: 10px;
   width: 100px;
+  
 }
+.gnb li:nth-child(1)>a{border-radius: 5px 5px 0 0 ; color: #fff; background-color: #1F7E93;}
+.gnb li:nth-child(2)>a{border-radius: 5px 5px 0 0 ;color: #fff; background-color: #1F931F;}
+.gnb li:nth-child(3)>a{border-radius: 5px 5px 0 0 ;color: #fff; background-color: #931F7E;}
+.gnb li:nth-child(4)>a{border-radius: 5px 5px 0 0 ;color: #fff; background-color: #931F21;}
+
 .gnb>ul>li>a{
   display: block;
   padding: 5px 10px;
   text-align: center;
   font-weight: bold;
 }
-.gnb li.active:nth-child(1)>a{color: #fff; background-color: #1F7E93;}
-.gnb li.active:nth-child(2)>a{color: #fff; background-color: #1F931F;}
-.gnb li.active:nth-child(3)>a{color: #fff; background-color: #931F7E;}
-.gnb li.active:nth-child(4)>a{color: #fff; background-color: #931F21;}
 
 /* intro */
 
@@ -49,39 +61,94 @@ header{
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  transform: translateY(500px);
   display: none;
+  position: relative;
+  transform: translateY(100px);
 }
-#intro h2, #intro p{
-  opacity: 0;
-  animation: fadeSlideUp 1s ease-out forwards;
-}
-#intro h2{
-  font-size: 100px;
-  text-indent: 20px;
+
+#intro h2,#intro p{
+  font-size: 60px;
+  text-align: center;
   text-transform: uppercase;
-  animation-delay: 0.2s;
-}
-#intro hr{
-  margin: 10px;
-  color: #9D9D9D;
-  border: 2px solid #9d9d9d;
-  box-shadow: 3px 3px 10px rgb(157,157,157,0.8);
+  font-weight: bold;
+  color: #444;
+  opacity: 0;
+  animation: fadeBlurIn 3s ease infinite;
+  filter: blur(10px);
 }
 #intro p{
-  font-size: 40px;
-  text-indent: 20px;
+  position: absolute;
+  bottom: -280px;
+  left: 438px;
+  animation-delay: 0.6s;
+  color: #222;
+}
+
+
+.gradient-box{
+  position: relative;
+  width: 300px;
+  height: 120px;
+  margin: 50px auto;
+}
+.gradient{
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: fadeBlurIn 3s ease infinite;
+  filter: blur(10px);
+  color: #fff;
+  font-size: 20px;
+  display: flex;             
+  align-items: center;        
+  justify-content: center;   
+}
+.bar1{
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  top: 20px;
+  background: linear-gradient(90deg, rgba(31, 126, 147, 1), rgba(201, 255, 252, 1));
+  box-shadow: 0 0 80px rgba(31, 126, 147, 0.4);
+}
+.bar2{
+  width: 220px;
+  height: 220px;
+  left: 50px;
+  top: -40px;
+  background: linear-gradient(265deg, rgba(31, 147, 31, 1), rgba(188, 255, 188, 1));
+  box-shadow: 0 0 80px rgba(31, 147, 31, 0.4);
+  animation-delay: 0.2s;
+}
+.bar3{
+  width: 200px;
+  height: 200px;
+  left: 210px;
+  top: 20px;
+  background: linear-gradient(358deg, rgba(147, 31, 126, 1), rgba(255, 228, 250, 1));
+  box-shadow: 0 0 80px rgba(147, 31, 126, 0.4);
+  animation-delay: 0.4s;
+}
+.bar4{
+  width: 190px;
+  height: 190px;
+  left: 60px;
+  top: 105px;
+  background: linear-gradient(215deg, rgba(147, 31, 33, 1), rgba(255, 221, 221, 1));
+  box-shadow: 0 0 80px rgba(147, 31, 33, 0.4);
   animation-delay: 0.6s;
 }
 
-@keyframes fadeSlideUp{
+@keyframes fadeBlurIn {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    filter: blur(20px);
+    transform: scale(1.07);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    filter: blur(0px);
+    transform: scale(1);
   }
 }
 
@@ -240,7 +307,7 @@ header{
 
 
 /* 프로젝트 팝업내용 */
-.personal-popup,.team1-popup,.team2-popup{
+.personal1-popup,.team1-popup,.team2-popup{
   max-width: 1200px;
   width: 100%;
   height: 625px;
@@ -254,43 +321,43 @@ header{
 }
 
 
-.personal-popup h3, .team1-popup h3, .team2-popup h3{
+.personal1-popup h3, .team1-popup h3, .team2-popup h3{
   text-align: center;
   margin: 30px 0;
 }
-.personal-popup-content, .team1-popup-content, .team2-popup-content{
+.personal1-popup-content, .team1-popup-content, .team2-popup-content{
   display: flex;
   justify-content: space-between;
   width: 100%
 }
-.personal-popup-left, .team1-popup-left, .team2-popup-left{
+.personal1-popup-left, .team1-popup-left, .team2-popup-left{
   text-align: center;
   width: 40%;
   margin-right: 70px;
   line-height: 40px;
 }
-.personal-popup-left p>a, .team1-popup-left p>a, .team2-popup-left p>a{
+.personal1-popup-left p>a, .team1-popup-left p>a, .team2-popup-left p>a{
   padding: 5px 10px;
   background-color: #931F7E;
   color: #fff;
   border-radius: 10px;
 }
-.personal-popup-left img, .team1-popup-left img, .team2-popup-left img{
+.personal1-popup-left img, .team1-popup-left img, .team2-popup-left img{
   width: 400px;
   height: auto;
 }
 
-.personal-popup-right, .team1-popup-right, .team-popup-right{
+.personal1-popup-right, .team1-popup-right, .team-popup-right{
   width: 60%;
 }
-.personal-popup-right dt, .team1-popup-right dt, .team2-popup-right dt{
+.personal1-popup-right dt, .team1-popup-right dt, .team2-popup-right dt{
   font-weight: bold;
 }
-.personal-popup-right dd, .team1-popup-right dd, .team2-popup-right dd{
+.personal1-popup-right dd, .team1-popup-right dd, .team2-popup-right dd{
   margin-bottom: 15px;
 }
 
-.personal-popup-close, .team1-popup-close, .team2-popup-close{
+.popup-close{
   position: absolute;
   right: 15px;
   top:59px;

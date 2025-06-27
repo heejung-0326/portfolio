@@ -12,6 +12,9 @@
   <div class="wrap">
     <!-- 헤더 -->
     <header>
+      <h1>
+        <img src="./images/logo.png" alt="로고이미지">
+      </h1>
       <nav class="gnb">
         <ul>
           <li>
@@ -34,9 +37,14 @@
 
     <!-- 인트로 -->
     <section id="intro">
-      <h2>Portfolio</h2>
-      <hr>
-      <p>지희정 포토폴리오</p>
+      <h2>heejung</h2>
+      <div class="gradient-box">
+        <div class="gradient bar1">CSS3</div>
+        <div class="gradient bar2">JAVASCRIPT</div>
+        <div class="gradient bar3">FIGMA</div>
+        <div class="gradient bar4">HTML5</div>
+      </div>
+      <p>Portfolio</p>
     </section>
 
     <!-- 어바웃 -->
@@ -108,7 +116,7 @@
       <h2>Project</h2>
       <div class="project-list">
         <ul>
-          <li class="personal-project">
+          <li class="project-item" data-popup="personal1">
             <a href="#" aria-label="개인프로젝트1">
               <img src="./images/project1.png" alt="개인프로젝트1">
               <h3>개인프로젝트</h3>
@@ -118,7 +126,7 @@
               </div>
             </a>
           </li>
-          <li class="team1-project">
+          <li class="project-item" data-popup="team1">
             <a href="#" aria-label="팀프로젝트1">
               <img src="./images/project2.png" alt="팀프로젝트1">
               <h3>팀프로젝트1</h3>
@@ -128,7 +136,7 @@
               </div>
             </a>
           </li>
-          <li class="team2-project">
+          <li class="project-item" data-popup="team2">
             <a href="#" aria-label="팀프로젝트2">
               <img src="./images/project3.png" alt="팀프로젝트2">
               <h3>팀프로젝트2</h3>
@@ -142,12 +150,12 @@
       </div>
     </section>
 
-    <div class="personal-popup">
+    <div class="personal1-popup">
       <h3>
         <i class="fa-regular fa-hand-point-down"> 프로젝트소개</i>
       </h3>
-      <div class="personal-popup-content" >
-        <div class="personal-popup-left">
+      <div class="personal1-popup-content" >
+        <div class="personal1-popup-left">
           <img src="./images/project1_popup.png" alt="개인프로젝트팝업이미지">
           <p>HD현대중공업 랜딩페이지</p>
           <p>
@@ -155,7 +163,7 @@
             <a href="https://www.figma.com/proto/ImRNejargqle0meBJmoQqy/1%EC%B0%A8-project?node-id=9-2&t=80CijlXxz9yAtKII-1" aria-label="피그마바로가기">Prototype</a>
           </p>
         </div>
-        <div class="personal-popup-right">
+        <div class="personal1-popup-right">
           <dl>
             <dt>프로젝트 주제 : </dt>
             <dd>Landing Page - Static Web App : 세계 시가총액 10위 내 기업 선정 메인 페이지 리뉴얼</dd>
@@ -170,7 +178,7 @@
             <dt>프로젝트 배포 :</dt>
             <dd>Frontend - 닷홈</dd>
           </dl>
-          <button class="personal-popup-close">
+          <button class="popup-close" data-popup="personal1">
             <i class="fa-solid fa-x"></i>
           </button>
         </div>
@@ -210,7 +218,7 @@
             <dt>프로젝트 배포 :</dt>
             <dd>Frontend - 닷홈 / DB - phpAdmin(MY-SQL)</dd>
           </dl>
-          <button class="team1-popup-close">
+          <button class="popup-close" data-popup="team1">
             <i class="fa-solid fa-x"></i>
           </button>
         </div>
@@ -251,7 +259,7 @@
             <dt>프로젝트 배포 :</dt>
             <dd>Frontend - 깃허브 / back - 클라우드 타입 / DB - phpAdmin(MY-SQL)</dd>
           </dl>
-          <button class="team2-popup-close">
+          <button class="popup-close" data-popup="team2">
             <i class="fa-solid fa-x"></i>
           </button>
         </div>

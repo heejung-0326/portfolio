@@ -22,9 +22,13 @@ header h1{
   left: 360px;
   top: 57px;
   width: 100px;
+  z-index: 10;
 }
 header h1 img{
   width: 100%;
+}
+header h1 a{
+  display: block;
 }
 
 .gnb{

@@ -1,7 +1,6 @@
 $(function(){
   // 헤더 메뉴 클릭시
   $('.gnb li').removeClass('active').eq(0).addClass('active');
-  $('header').css('backgroundColor','#C9FFFC');
 
   const sectionIds = [
     '#intro', '#about', '#project'
@@ -15,13 +14,6 @@ $(function(){
     e.preventDefault();
     const idx = $(this).parent().index();
 
-    let headerColor = [
-      '#C9FFFC',
-      '#BCFFBC',
-      '#FFE4FA',
-      '#FFDDDD'
-    ];
-    $('header').css('backgroundColor', headerColor[idx]);
 
     $('#intro, #about, #project').fadeOut(300);
     setTimeout (()=>{
@@ -36,20 +28,42 @@ $(function(){
       $('.modal').fadeOut(300, function(){
         $('#intro').fadeIn(300);
         $('.gnb li').removeClass('active').eq(0).addClass('active');
-        $('header').css('backgroundColor','#c9fffc');
       });
     });
   });
 
-  // 프로젝트 팝업
-  $('.project-item').on('click', function(e){
-    e.preventDefault();
-    const target = $(this).data('popup');
-    $('.' + target + '-popup').slideDown(500);
-  });
+  //프로젝트 슬라이드
+  let slide = 0;
+  const slides = $('.slide');
+  const slideCount = slides.length;
 
-  $('.popup-close').on('click', function(){
-    const target = $(this).data('popup');
-    $('.'+ target + '-popup').slideUp(500);
-  });
+  slides.hide().eq(0).show();
+
+  $('.slide-next').click(function(){
+    if(slide<slideCount-1){
+      slides.eq(slide).fadeOut(300,function(){
+        slide++;
+        slides.eq(slide).fadeIn(300);
+      });
+  }else{
+    slides.eq(slide).fadeOut(300, function(){
+      slide =0;
+      slides.eq(slide).fadeIn(300);
+    });
+  }
+});
+
+$('.slide-prev').click(function(){
+  if(slide>0){
+    slides.eq(slide).fadeOut(300,function(){
+      slide--;
+      slides.eq(slide).fadeIn(300);
+    });
+  }else{
+    slides.eq(slide).fadeOut(300, function(){
+      sldie = slideCount -1;
+      slides.eq(slide).fadeIn(300);
+    });
+  }
+});
 });

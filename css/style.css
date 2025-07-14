@@ -424,6 +424,43 @@ mark{
   align-items: center;
   height: 800px;
 }
+.spec{
+  width: 80px;
+  height: 10px;
+  padding: 2px 5px;
+}
+.project_desc .figma{
+  background-color: #f082c2;
+  color: #333;
+}
+.project_desc .html{
+  background-color: #dd8532;
+  color: #fff;
+}
+.project_desc .css{
+  background-color: #4152b3;
+  color: #fff;
+}
+.project_desc .javascript{
+  background-color: #ffff00;
+  color: #333;
+}
+.project_desc .jquery{
+  background-color: #7ba5d4;
+  color: #333;
+}
+.project_desc .php{
+  background-color: #474A8A;
+  color: #fff;
+}
+.project_desc .react{
+  background-color: #61DAFB;
+  color: #fff;
+}
+.project_desc .sass{
+  background-color: #cc6699;
+  color: #fff;
+}
 .project_desc ul{
   padding-left: 0;
 }

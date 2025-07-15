@@ -1,6 +1,6 @@
 $(function() {
   const $topBtn = $('.top_btn');
-  if ($(window).scrollTop() <= 300) {
+  if ($(window).scrollTop() <= 1000) {
     $topBtn.hide(); 
   }
 

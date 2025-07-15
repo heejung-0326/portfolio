@@ -1,9 +1,10 @@
-$(function(){
-
+$(function() {
   const $topBtn = $('.top_btn');
+  if ($(window).scrollTop() <= 300) {
+    $topBtn.hide(); 
+  }
 
-  $(window).on('scroll', function(){
-
+  $(window).on('scroll', function() {
     const scrollTop = $(window).scrollTop();
     const scrollBottom = scrollTop + $(window).height();
 
